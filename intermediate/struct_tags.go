@@ -1,4 +1,4 @@
-package main
+package intermediate
 
 import (
 	"encoding/json"
@@ -6,14 +6,14 @@ import (
 	"log"
 )
 
-type Person struct {
+type PersonH struct {
 	FirstName string `json:"first_name" db:"firstn" xml:"first"`
 	LastName  string `json:"last_name,omitempty"`
 	Age       int    `json:"-"`
 }
 
 func main() {
-	person := Person{FirstName: "Jane", Age: 0}
+	person := PersonH{FirstName: "Jane", Age: 0}
 	jsonData, err := json.Marshal(person)
 	if err != nil {
 		log.Fatalln("Error marshalling struct:", err)

@@ -1,4 +1,5 @@
-//package intermediate
+package intermediate
+
 //
 //import "github.com/sirupsen/logrus"
 //
